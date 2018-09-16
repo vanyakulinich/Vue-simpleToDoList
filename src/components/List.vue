@@ -1,8 +1,8 @@
 <template>
-  <ul>
-    <li v-for='item in todos' v-bind:key='item'>
+  <ul class='list'>
+    <li class='item' v-for='item in todos' v-bind:key='item'>
       {{item}}
-      <button v-on:click='del' v-bind:name='item'>done</button>
+      <button class='button' v-on:click='del' v-bind:name='item'>&#10004;</button>
     </li>
   </ul>
 </template>
@@ -21,5 +21,31 @@
     }
   }
 </script>
+
+<style scoped>
+  .list {
+    list-style-type: none;
+    padding: 0;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .item {
+    width: 90%;
+    display: flex;
+    margin: 5px 0;
+    font-size: 20px;
+    font-style: italic;
+    color: rgba(48, 48, 48, 0.6);
+    position: relative;
+  }
+  .button {
+    color: green;
+    position: absolute;
+    right: 0;
+  }
+</style>
+
 
 
