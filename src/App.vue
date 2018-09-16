@@ -1,17 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 v-once>{{title}}</h1>
+    <List v-bind:todos='this.todos' v-bind:remove='remove'/>
+    <input @change='dynamicInput'/>
+    <button v-on:click='add'>add</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import List from './components/List.vue'
 
 export default {
   name: 'app',
+  data: function() {
+    return {
+      title: 'TODO LIST',
+      input: '',
+      todos:[]
+    }
+  },
   components: {
-    HelloWorld
+    List
+  },
+  methods: {
+    add: function() {
+      this.todos.push(this.input)
+    },
+    dynamicInput: function(e) {
+      this.input = e.target.value
+      e.target.value = ''
+    },
+    remove: function(item) {
+      this.todos = this.todos.filter(el=> el!==item)
+    }
   }
 }
 </script>
@@ -23,6 +44,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  font-style: italic;
   margin-top: 60px;
 }
 </style>
