@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # todo
 
 ## Project setup
@@ -19,3 +20,6 @@ yarn run build
 ```
 yarn run lint
 ```
+=======
+# Vue-simpleToDoList
+>>>>>>> 904fb7968355484e6e5d97017f15ede6c4ef4fef
