@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-# todo
+# Simple todo list with Vue.js
 
-## Project setup
+## App setup
 ```
-yarn install
+yarn install => yarn run serve
+app will be avaliable on port 8080
 ```
-
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-=======
-# Vue-simpleToDoList
->>>>>>> 904fb7968355484e6e5d97017f15ede6c4ef4fef
